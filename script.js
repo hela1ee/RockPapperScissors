@@ -30,6 +30,23 @@ optionImages.forEach((image, index) =>{
 
 		let cpuImages = ["./img/Rock-logo.png", "./img/Paper-logo.png", "./img/Scissors-logo.png"];
 		cpuResult.src = cpuImages[randomNumber];
+		let cpuValue = ["R", "P", "S"][randomNumber];
+		let userValue = ["R", "P", "S"][index];
+
+		let outcomes = {
+			RR: "Ничья",
+			RP: "Поражение",
+			RS: "Победа",
+			PP: "Ничья",
+			PR: "Победа",
+			PS: "Поражение",
+			SS: "Ничья",
+			SR: "Поражение",
+			SP: "Победа",
+		};
+
+		let outcomeValue = outcomes[userValue + cpuValue];
+		result.textContent = userValue === cpuValue ? "Draw" : `${outcomeValue}`;	
 
 		}, 1800);
 	});

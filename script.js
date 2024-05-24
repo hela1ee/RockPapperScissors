@@ -46,7 +46,7 @@ optionImages.forEach((image, index) =>{
 		};
 
 		let outcomeValue = outcomes[userValue + cpuValue];
-		result.textContent = userValue === cpuValue ? "Draw" : `${outcomeValue}`;	
+		result.textContent = userValue === cpuValue ? "Ничья" : `${outcomeValue}`;	
 
 		}, 1800);
 	});
